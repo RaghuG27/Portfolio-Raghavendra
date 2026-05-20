@@ -53,7 +53,7 @@ export default function Contact() {
           viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <p className="text-blue-500 font-medium mb-3">
+          <p className="text-blue-500 text-2xl font-medium mb-3">
             Contact
           </p>
 

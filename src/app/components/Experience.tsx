@@ -93,7 +93,7 @@ export default function Experience() {
           viewport={{ once: true }}
           className="text-center mb-24"
         >
-          <p className="text-blue-500 font-medium mb-3">
+          <p className="text-blue-500 text-2xl font-medium mb-3">
             Experience
           </p>
 

@@ -65,7 +65,7 @@ export default function Skills() {
           viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <p className="text-blue-500 text-2xl font-large mb-3">
+          <p className="text-blue-500 text-2xl font-medium mb-3">
             Skills
           </p>
 
