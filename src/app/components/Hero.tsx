@@ -88,7 +88,7 @@ export default function Hero() {
             {/* Social Icons */}
             <div className="flex justify-center lg:justify-start gap-6 my-10 text-2xl ">
               <a
-                href="#"
+                href="https://github.com/RaghuG27/"
                 className="text-slate-400 hover:text-blue-500 transition-all duration-300 transform hover:-translate-y-2 hover:scale-125"
               >
                 <FaGithub />
