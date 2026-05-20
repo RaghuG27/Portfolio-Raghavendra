@@ -14,9 +14,9 @@ export default function Hero() {
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-10">
 
       {/* Background Blur */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl"></div>
+      <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl pointer-events-none"></div>
 
-      <div className="absolute bottom-10 right-10 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-10 right-10 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl pointer-events-none"></div>
 
       <div className="container mx-auto">
         <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-16">
@@ -64,7 +64,7 @@ export default function Hero() {
 
             {/* Buttons */}
             <div className="flex flex-wrap justify-center lg:justify-start gap-4 mt-8">
-              <button className="bg-blue-500 hover:bg-blue-600 cursor-pointer px-7 py-3 rounded-2xl transition duration-300 font-medium" onClick={()=>{
+              <button className="bg-blue-500 hover:bg-blue-600 cursor-pointer px-7 py-3 rounded-2xl transition duration-300 font-medium " onClick={()=>{
               document.getElementById('experience')?.scrollIntoView({
                 behavior: 'smooth',
               });
@@ -79,14 +79,14 @@ export default function Hero() {
                 link.download = "Raghavendra_Gabbur.pdf";
                 link.click();
               }}
-              className="border border-3 border-slate-600 hover:text-blue-500 cursor-pointer hover:border-blue-500 px-7 py-3 rounded-2xl transition duration-300 font-medium"
+              className="border border-3 border-slate-600 hover:text-blue-500 cursor-pointer hover:border-blue-500 px-7 py-3 rounded-2xl transition duration-300 font-medium "
             >
               Download CV
             </button>
             </div>
 
             {/* Social Icons */}
-            <div className="flex justify-center lg:justify-start gap-6 my-10 text-2xl">
+            <div className="flex justify-center lg:justify-start gap-6 my-10 text-2xl ">
               <a
                 href="#"
                 className="text-slate-400 hover:text-blue-500 transition-all duration-300 transform hover:-translate-y-2 hover:scale-125"
@@ -127,7 +127,7 @@ export default function Hero() {
                 width={350}
                 height={350}
                 className="rounded-full object-cover
-                w-[250px] h-[250px]
+                w-[200px] h-[200px]
                 md:w-[350px] md:h-[350px] "
                
               />

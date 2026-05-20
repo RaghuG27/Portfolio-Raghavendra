@@ -78,7 +78,7 @@ export default function Experience() {
   return (
     <section
       id="experience"
-      className="py-28  px-4 bg-slate-950 relative overflow-hidden"
+      className="py-28  px-4 bg-slate-900 relative overflow-hidden"
     >
       {/* Background Glow */}
       <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl"></div>
@@ -130,7 +130,7 @@ export default function Experience() {
               </div>
 
               {/* Card */}
-              <div className="bg-slate-900/80 backdrop-blur-lg border border-slate-800 rounded-3xl p-8 hover:border-blue-500 transition duration-300">
+              <div className="bg-slate-950 backdrop-blur-lg border border-slate-800 rounded-3xl p-8 hover:border-blue-500 transition duration-300">
 
                 {/* Header */}
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">

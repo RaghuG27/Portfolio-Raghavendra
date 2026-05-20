@@ -53,7 +53,7 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="py-28 px-4 bg-slate-950"
+      className="py-28 px-4 bg-slate-900"
     >
       <div className="container mx-auto">
 
@@ -81,7 +81,7 @@ export default function Skills() {
         </motion.div>
 
        {/* Skills Grid */}
-<div className="grid md:grid-cols-2 gap-8">
+<div className="grid md:grid-cols-2 gap-8 ">
 
   {skillCategories.map((category, index) => (
     <motion.div
@@ -97,7 +97,7 @@ export default function Skills() {
         relative
         overflow-hidden
         group
-        bg-slate-900/70
+        bg-slate-950
         backdrop-blur-xl
         border border-slate-800
         rounded-3xl
