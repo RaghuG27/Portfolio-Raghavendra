@@ -41,7 +41,7 @@ export default function Hero() {
             <h3 className="text-2xl md:text-6xl font-bold mt-6 text-blue-500">
         <TypeAnimation
           sequence={[
-            "Web Developer",
+            "Full Stack Developer",
             2000,
             "React Native Developer",
             2000,
@@ -122,7 +122,7 @@ export default function Hero() {
 
             <div className="relative border-4 border-blue-500 rounded-full p-2 mt-25 md:mt-0">
               <Image
-                src="/profile.png"
+                src="/profile.jpg"
                 alt="profile"
                 width={350}
                 height={350}
