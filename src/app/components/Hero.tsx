@@ -153,43 +153,108 @@ export default function Hero() {
       transition={{ duration: 0.8 }}
       className="flex flex-wrap justify-center lg:justify-start gap-4 mt-8"
     >
-      <button
-        className="bg-blue-500 hover:bg-blue-600 cursor-pointer px-7 py-3 rounded-2xl font-medium transition-all duration-300 hover:scale-105 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(59,130,246,0.35)] active:scale-95"
-      >
-        View Experience
-      </button>
+     {/* View Experience */}
+<button
+  onClick={() => {
+    document.getElementById("experience")?.scrollIntoView({
+      behavior: "smooth",
+    });
+  }}
+  className="
+    bg-blue-500 hover:bg-blue-600
+    cursor-pointer
+    px-7 py-3
+    rounded-2xl
+    font-medium
+    transition-all duration-300
+    hover:scale-105
+    hover:-translate-y-1
+    hover:shadow-[0_10px_30px_rgba(59,130,246,0.35)]
+    active:scale-95
+  "
+>
+  View Experience
+</button>
 
-      <button
-        className="border border-slate-600 hover:text-blue-500 hover:border-blue-500 cursor-pointer px-7 py-3 rounded-2xl font-medium transition-all duration-300 hover:scale-105 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(59,130,246,0.2)] active:scale-95 backdrop-blur-sm"
-      >
-        Download CV
-      </button>
+{/* Download CV */}
+<button
+  onClick={() => {
+    const link = document.createElement("a");
+    link.href = "/Raghavendra_Gabbur.pdf";
+    link.download = "Raghavendra_Gabbur.pdf";
+    link.click();
+  }}
+  className="
+    border border-slate-600
+    hover:text-blue-500
+    hover:border-blue-500
+    cursor-pointer
+    px-7 py-3
+    rounded-2xl
+    font-medium
+    transition-all duration-300
+    hover:scale-105
+    hover:-translate-y-1
+    hover:shadow-[0_10px_30px_rgba(59,130,246,0.2)]
+    active:scale-95
+    backdrop-blur-sm
+  "
+>
+  Download CV
+</button>
     </motion.div>
 
     {/* Social Icons */}
     <motion.div
-      variants={{
-        hidden: { opacity: 0, y: 20 },
-        visible: { opacity: 1, y: 0 },
-      }}
-      transition={{ duration: 0.8 }}
-      className="flex justify-center lg:justify-start gap-6 mt-12"
-    >
-      {[FaGithub, FaLinkedin, FaInstagram].map((Icon, index) => (
-        <motion.div
-          key={index}
-          whileHover={{ scale: 1.15, y: -5 }}
-          className="w-14 h-14 flex items-center justify-center rounded-2xl
-          bg-white/5 border border-slate-700/50 backdrop-blur-xl
-          text-slate-400 text-2xl
-          hover:text-blue-400 hover:border-blue-500
-          hover:shadow-[0_0_30px_rgba(34,211,238,0.45)]
-          transition-all duration-300"
+          variants={{
+            hidden: { opacity: 0, y: 20 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          transition={{ duration: 0.8 }}
+          className="flex justify-center lg:justify-start gap-6 mt-12"
         >
-          <Icon />
+          {[
+            {
+              icon: FaGithub,
+              link: "https://github.com/RaghuG27",
+            },
+            {
+              icon: FaLinkedin,
+              link: "https://linkedin.com/in/raghavendra-gabbur",
+            },
+            {
+              icon: FaInstagram,
+              link: "https://instagram.com/",
+            },
+          ].map((social, index) => {
+            const Icon = social.icon;
+
+            return (
+              <motion.a
+                key={index}
+                href={social.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.15, y: -5 }}
+                className="
+                  w-14 h-14
+                  flex items-center justify-center
+                  rounded-2xl
+                  bg-white/5
+                  border border-slate-700/50
+                  backdrop-blur-xl
+                  text-slate-400 text-2xl
+                  hover:text-blue-400
+                  hover:border-blue-500
+                  hover:shadow-[0_0_30px_rgba(34,211,238,0.45)]
+                  transition-all duration-300
+                "
+              >
+                <Icon />
+              </motion.a>
+            );
+          })}
         </motion.div>
-      ))}
-    </motion.div>
   </motion.div>
 
   {/* RIGHT IMAGE */}
