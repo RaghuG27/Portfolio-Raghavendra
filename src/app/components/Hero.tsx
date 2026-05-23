@@ -9,6 +9,11 @@ import {
 } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
 
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
+};
+
 export default function Hero() {
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-10">
@@ -21,119 +26,236 @@ export default function Hero() {
       <div className="container mx-auto">
         <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-16">
 
-          {/* Left Content */}
-          <motion.div
-            initial={{ opacity: 0, x: -80 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center lg:text-left"
-          >
-            <p className="text-blue-500 text-3xl mb-3">
-              Hello, I&apos;m
-            </p>
+  {/* LEFT CONTENT */}
+  <motion.div
+    initial="hidden"
+    animate="visible"
+    variants={{
+      hidden: {},
+      visible: {
+        transition: {
+          staggerChildren: 0.25,
+        },
+      },
+    }}
+    className="text-center lg:text-left"
+  >
 
-            <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-              Raghavendra
-          
-              
-            </h1>
+    {/* Status Badge */}
+    <motion.div
+      variants={{
+        hidden: { opacity: 0, y: 20 },
+        visible: { opacity: 1, y: 0 },
+      }}
+      transition={{ duration: 0.6 }}
+      className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/5 text-blue-400 text-sm mb-6 backdrop-blur-md"
+    >
+      <span className="relative flex h-2 w-2">
+        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75" />
+        <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500" />
+      </span>
+      Available for opportunities
+    </motion.div>
 
-            <h3 className="text-2xl md:text-6xl font-bold mt-6 text-blue-500">
-        <TypeAnimation
-          sequence={[
-            "Full Stack Developer",
-            2000,
-            "React Native Developer",
-            2000,
-            "Frontend Developer",
-            2000,
-            "Backend Developer",
-            2000,
-          ]}
-          wrapper="span"
-          speed={50}
-          repeat={Infinity}
-        />
-      </h3>
+    {/* Greeting */}
+    <motion.p
+      variants={{
+        hidden: { opacity: 0, x: -30 },
+        visible: { opacity: 1, x: 0 },
+      }}
+      transition={{ duration: 0.7 }}
+      className="text-blue-400 text-lg font-medium tracking-widest uppercase mb-2"
+    >
+      Hello, I&apos;m
+    </motion.p>
 
-            <p className="text-slate-400 mt-6 max-w-2xl text-lg leading-relaxed">
-              I build scalable web and mobile applications using
-              Next.js, React, Django, React Native, and modern
-              backend technologies.
-            </p>
+    {/* Heading */}
+    <motion.h1
+      variants={{
+        hidden: { opacity: 0, y: 40 },
+        visible: { opacity: 1, y: 0 },
+      }}
+      transition={{ duration: 0.8 }}
+      className="text-6xl md:text-7xl font-black leading-none tracking-tight"
+    >
+      <span className="text-white">Ragha</span>
 
-            {/* Buttons */}
-            <div className="flex flex-wrap justify-center lg:justify-start gap-4 mt-8">
-              <button className="bg-blue-500 hover:bg-blue-600 cursor-pointer px-7 py-3 rounded-2xl transition duration-300 font-medium " onClick={()=>{
-              document.getElementById('experience')?.scrollIntoView({
-                behavior: 'smooth',
-              });
-}}>
-                View Experience
-              </button>
+      <span
+        style={{
+          WebkitTextStroke: "2px rgb(59,130,246)",
+          color: "transparent",
+        }}
+      >
+        vendra
+      </span>
+    </motion.h1>
 
-             <button
-              onClick={() => {
-                const link = document.createElement("a");
-                link.href = "/Raghavendra_Gabbur.pdf";
-                link.download = "Raghavendra_Gabbur.pdf";
-                link.click();
-              }}
-              className="border border-3 border-slate-600 hover:text-blue-500 cursor-pointer hover:border-blue-500 px-7 py-3 rounded-2xl transition duration-300 font-medium "
-            >
-              Download CV
-            </button>
-            </div>
+    {/* Role */}
+    <motion.div
+      variants={{
+        hidden: { opacity: 0, y: 30 },
+        visible: { opacity: 1, y: 0 },
+      }}
+      transition={{ duration: 0.7 }}
+      className="mt-5 h-14 flex items-center justify-center lg:justify-start"
+    >
+      <span className="text-2xl md:text-4xl font-bold text-slate-400">
+        {"< "}
+        <span className="text-blue-400">
+          <TypeAnimation
+            sequence={[
+              "Full Stack Developer",
+              2000,
+              "React Native Dev",
+              2000,
+              "Frontend Engineer",
+              2000,
+              "Backend Engineer",
+              2000,
+            ]}
+            wrapper="span"
+            speed={55}
+            repeat={Infinity}
+          />
+        </span>
+        {" />"}
+      </span>
+    </motion.div>
 
-            {/* Social Icons */}
-            <div className="flex justify-center lg:justify-start gap-6 my-10 text-2xl ">
-              <a
-                href="https://github.com/RaghuG27/"
-                className="text-slate-400 hover:text-blue-500 transition-all duration-300 transform hover:-translate-y-2 hover:scale-125"
-              >
-                <FaGithub />
-              </a>
+    {/* Description */}
+    <motion.div
+      variants={{
+        hidden: { opacity: 0, y: 30 },
+        visible: { opacity: 1, y: 0 },
+      }}
+      transition={{ duration: 0.8 }}
+      className="relative mt-6 max-w-2xl"
+    >
+      <div className="absolute -inset-4 bg-blue-500/10 blur-3xl rounded-3xl opacity-60 pointer-events-none"></div>
 
-              <a
-                href="https://www.linkedin.com/in/raghavendra-gabbur/"
-                className="text-slate-400 hover:text-blue-500 transition-all duration-300 transform hover:-translate-y-2 hover:scale-125"
-              >
-                <FaLinkedin />
-              </a>
+      <p className="relative text-slate-400 text-lg leading-relaxed tracking-wide backdrop-blur-sm">
+        Passionate about building
+        <span className="text-slate-200 font-medium">
+          {" "}high-performance web and mobile applications
+        </span>
+        {" "}with clean UI, scalable backend architecture, and seamless user
+        experiences using modern technologies like Next.js, React, Django,
+        and React Native.
+      </p>
+    </motion.div>
 
-              <a
-                href="#"
-                className="text-slate-400 hover:text-blue-500 transition-all duration-300 transform hover:-translate-y-2 hover:scale-125"
-              >
-                <FaInstagram />
-              </a>
-            </div>
-          </motion.div>
+    {/* Buttons */}
+    <motion.div
+      variants={{
+        hidden: { opacity: 0, y: 30 },
+        visible: { opacity: 1, y: 0 },
+      }}
+      transition={{ duration: 0.8 }}
+      className="flex flex-wrap justify-center lg:justify-start gap-4 mt-8"
+    >
+      <button
+        className="bg-blue-500 hover:bg-blue-600 cursor-pointer px-7 py-3 rounded-2xl font-medium transition-all duration-300 hover:scale-105 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(59,130,246,0.35)] active:scale-95"
+      >
+        View Experience
+      </button>
 
-          {/* Right Image */}
-          <motion.div
-            initial={{ opacity: 0, x: 80 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="relative"
-          >
-            {/* Glow Effect */}
-            <div className="absolute inset-0 bg-blue-500/20 rounded-full blur-3xl"></div>
+      <button
+        className="border border-slate-600 hover:text-blue-500 hover:border-blue-500 cursor-pointer px-7 py-3 rounded-2xl font-medium transition-all duration-300 hover:scale-105 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(59,130,246,0.2)] active:scale-95 backdrop-blur-sm"
+      >
+        Download CV
+      </button>
+    </motion.div>
 
-            <div className="relative border-4 border-blue-500 rounded-full p-2 mt-25 md:mt-0">
-              <Image
-                src="/profile.jpg"
-                alt="profile"
-                width={350}
-                height={350}
-                className="rounded-full object-cover
-                w-[200px] h-[200px]
-                md:w-[350px] md:h-[350px] "
-               
-              />
-            </div>
-          </motion.div>
-        </div>
+    {/* Social Icons */}
+    <motion.div
+      variants={{
+        hidden: { opacity: 0, y: 20 },
+        visible: { opacity: 1, y: 0 },
+      }}
+      transition={{ duration: 0.8 }}
+      className="flex justify-center lg:justify-start gap-6 mt-12"
+    >
+      {[FaGithub, FaLinkedin, FaInstagram].map((Icon, index) => (
+        <motion.div
+          key={index}
+          whileHover={{ scale: 1.15, y: -5 }}
+          className="w-14 h-14 flex items-center justify-center rounded-2xl
+          bg-white/5 border border-slate-700/50 backdrop-blur-xl
+          text-slate-400 text-2xl
+          hover:text-blue-400 hover:border-blue-500
+          hover:shadow-[0_0_30px_rgba(34,211,238,0.45)]
+          transition-all duration-300"
+        >
+          <Icon />
+        </motion.div>
+      ))}
+    </motion.div>
+  </motion.div>
+
+  {/* RIGHT IMAGE */}
+  <motion.div
+    initial={{ opacity: 0, scale: 0.8 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{
+      duration: 1,
+      delay: 1.5,
+    }}
+    className="relative flex items-center justify-center"
+  >
+
+
+
+  
+
+    {/* Floating Image */}
+<motion.div
+  animate={{
+    y: [0, -10, 0],
+  }}
+  transition={{
+    duration: 4,
+    repeat: Infinity,
+    ease: "easeInOut",
+  }}
+  className="relative mt-25 md:mt-0"
+>
+
+  {/* Complete Ring */}
+<div
+  className="
+    absolute
+    -inset-2
+    rounded-full
+    border-[5px]
+    border-blue-500
+    shadow-[0_0_25px_rgba(59,130,246,0.35)]
+  "
+/>
+
+{/* Image */}
+<div
+  className="
+    relative
+    rounded-full
+    p-2
+    bg-[#020617]
+  "
+>
+  <Image
+    src="/profile.jpg"
+    alt="profile"
+    width={350}
+    height={350}
+    className="
+      rounded-full object-cover
+      w-[200px] h-[200px]
+      md:w-[350px] md:h-[350px]
+    "
+  />
+</div>
+</motion.div>
+  </motion.div>
+</div>
       </div>
 
       {/* Scroll Indicator */}

@@ -1,6 +1,15 @@
 "use client";
 
 import { motion } from "framer-motion";
+{/* Add imports */}
+import {
+  FaReact,
+  FaPython,
+  FaDocker,
+  FaGitAlt,
+  FaDatabase,
+  FaServer,
+} from "react-icons/fa";
 
 export default function Skills() {
   const skillCategories = [
@@ -53,7 +62,7 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="py-28 px-4 bg-slate-900"
+      className="py-28 px-4 bg-slate-950"
     >
       <div className="container mx-auto">
 
@@ -149,46 +158,133 @@ export default function Skills() {
       </h3>
 
       {/* Skills */}
-      <div className="relative flex flex-wrap gap-4">
+<div className="relative flex flex-wrap gap-4">
 
-        {category.skills.map((skill, skillIndex) => (
-          <motion.div
-            key={skillIndex}
-            whileHover={{
-              scale: 1.08,
-            }}
-            whileTap={{
-              scale: 0.95,
-            }}
-            className="
-              px-5
-              py-3
-              rounded-2xl
-              bg-slate-800/80
-              border
-              border-slate-700
-              text-slate-300
-              font-medium
-              tracking-wide
-              cursor-pointer
-              transition-all
-              duration-300
-              hover:bg-gradient-to-r
-              hover:from-blue-500
-              hover:to-purple-500
-              hover:text-white
-              hover:border-transparent
-              hover:shadow-lg
-              hover:shadow-blue-500/20
-            "
-          >
-            {skill}
-          </motion.div>
-        ))}
-      </div>
+  {category.skills.map((skill, skillIndex) => (
+    <motion.div
+      key={skillIndex}
+      whileHover={{
+        y: -4,
+        scale: 1.05,
+      }}
+      whileTap={{
+        scale: 0.96,
+      }}
+      className="
+        group
+        relative
+        overflow-hidden
+        px-5
+        py-3
+        rounded-2xl
+        bg-slate-900/80
+        border border-slate-700/70
+        backdrop-blur-xl
+        cursor-pointer
+        transition-all
+        duration-300
+        hover:border-blue-500/40
+        hover:shadow-[0_10px_30px_rgba(59,130,246,0.15)]
+      "
+    >
+
+      {/* Animated Glow */}
+      <div
+        className="
+          absolute inset-0
+          opacity-0 group-hover:opacity-100
+          transition duration-500
+          bg-gradient-to-r
+          from-blue-500/10
+          via-cyan-400/10
+          to-purple-500/10
+        "
+      ></div>
+
+      {/* Shine Effect */}
+      <span
+        className="
+          absolute inset-0
+          -translate-x-full
+          group-hover:translate-x-full
+          transition-transform
+          duration-1000
+          bg-gradient-to-r
+          from-transparent
+          via-white/10
+          to-transparent
+        "
+      ></span>
+
+      {/* Text */}
+      <span
+        className="
+          relative z-10
+          text-slate-300
+          font-medium
+          tracking-wide
+          group-hover:text-white
+          transition duration-300
+        "
+      >
+        {skill}
+      </span>
     </motion.div>
   ))}
 </div>
+
+      
+      
+    </motion.div>
+
+    
+  ))}
+
+
+</div>
+  {/* Bottom Floating Icons */}
+<motion.div
+  initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+  viewport={{ once: true }}
+  className="
+    mt-24
+    flex flex-wrap
+    justify-center
+    text-center
+    gap-10
+    text-5xl
+    text-slate-700
+  "
+>
+  {[
+    FaReact,
+    FaPython,
+    FaDocker,
+    FaGitAlt,
+    FaDatabase,
+    FaServer,
+  ].map((Icon, index) => (
+    <motion.div
+      key={index}
+      animate={{
+        y: [0, -12, 0],
+      }}
+      transition={{
+        duration: 3,
+        repeat: Infinity,
+        delay: index * 0.2,
+      }}
+      className="
+        hover:text-blue-400
+        transition duration-300
+      "
+    >
+      <Icon />
+    </motion.div>
+  ))}
+</motion.div>
       </div>
     </section>
   );
