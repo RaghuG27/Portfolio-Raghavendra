@@ -1,10 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 export default function ScrollProgress() {
   const [scroll, setScroll] = useState(0);
-   useEffect(() => {
+
+  useEffect(() => {
     const handleScroll = () => {
       const totalHeight =
         document.documentElement.scrollHeight -
@@ -23,13 +25,36 @@ export default function ScrollProgress() {
     return () =>
       window.removeEventListener("scroll", handleScroll);
   }, []);
+
   return (
-    <div className='fixed top-0 left-0 h-1 bg-gradient-to-r from-blue-500 to-purple-500 z-[100]'
-    style={{ width: `${scroll}%` }}
-    />
-      
-
-  )
+    <div
+      className="
+        fixed
+        top-0
+        left-0
+        w-full
+        h-[3px]
+        z-[999]
+      "
+    >
+      <motion.div
+        className="
+          h-full
+          rounded-r-full
+          bg-gradient-to-r
+          from-blue-500
+          via-indigo-500
+          to-blue-600
+          shadow-[0_0_20px_rgba(59,130,246,0.5)]
+        "
+        animate={{
+          width: `${scroll}%`,
+        }}
+        transition={{
+          duration: 0.15,
+          ease: "easeOut",
+        }}
+      />
+    </div>
+  );
 }
-
-
