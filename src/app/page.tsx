@@ -13,7 +13,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="bg-slate-950 text-white overflow-x-hidden">
+    <main className="bg-[#F7F5EF] text-white overflow-x-hidden">
       <ScrollProgress/>
       <NavBar/>
      

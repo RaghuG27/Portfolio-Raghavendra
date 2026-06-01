@@ -6,329 +6,338 @@ import {
   FaGithub,
   FaLinkedin,
   FaInstagram,
+  FaArrowDown,
 } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
 
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 },
-};
-
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-10">
+    <section className="min-h-screen bg-[#F7F5EF] relative overflow-hidden flex items-center px-6 md:px-12 py-30">
 
-      {/* Background Blur */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl pointer-events-none"></div>
+      {/* Background Effects */}
 
-      <div className="absolute bottom-10 right-10 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-100 rounded-full blur-3xl opacity-50" />
 
-      <div className="container mx-auto">
-        <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-16">
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-orange-100 rounded-full blur-3xl opacity-50" />
 
-  {/* LEFT CONTENT */}
-  <motion.div
-    initial="hidden"
-    animate="visible"
-    variants={{
-      hidden: {},
-      visible: {
-        transition: {
-          staggerChildren: 0.25,
-        },
-      },
-    }}
-    className="text-center lg:text-left"
-  >
+      <div
+        className="
+      
+        "
+      />
 
-    {/* Status Badge */}
-    <motion.div
-      variants={{
-        hidden: { opacity: 0, y: 20 },
-        visible: { opacity: 1, y: 0 },
-      }}
-      transition={{ duration: 0.6 }}
-      className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/5 text-blue-400 text-sm mb-6 backdrop-blur-md"
-    >
-      <span className="relative flex h-2 w-2">
-        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75" />
-        <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500" />
-      </span>
-      Available for opportunities
-    </motion.div>
+      <div className="container mx-auto relative z-10">
+        <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-20">
 
-    {/* Greeting */}
-    <motion.p
-      variants={{
-        hidden: { opacity: 0, x: -30 },
-        visible: { opacity: 1, x: 0 },
-      }}
-      transition={{ duration: 0.7 }}
-      className="text-blue-400 text-lg font-medium tracking-widest uppercase mb-2"
-    >
-      Hello, I&apos;m
-    </motion.p>
+          {/* LEFT SIDE */}
 
-    {/* Heading */}
-    <motion.h1
-      variants={{
-        hidden: { opacity: 0, y: 40 },
-        visible: { opacity: 1, y: 0 },
-      }}
-      transition={{ duration: 0.8 }}
-      className="text-6xl md:text-7xl font-black leading-none tracking-tight"
-    >
-      <span className="text-white">Ragha</span>
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="max-w-3xl text-center lg:text-left"
+          >
+          
 
-      <span
-        style={{
-          WebkitTextStroke: "2px rgb(59,130,246)",
-          color: "transparent",
-        }}
-      >
-        vendra
-      </span>
-    </motion.h1>
+            {/* Heading */}
 
-    {/* Role */}
-    <motion.div
-      variants={{
-        hidden: { opacity: 0, y: 30 },
-        visible: { opacity: 1, y: 0 },
-      }}
-      transition={{ duration: 0.7 }}
-      className="mt-5 h-14 flex items-center justify-center lg:justify-start"
-    >
-      <span className="text-2xl md:text-4xl font-bold text-slate-400">
-        {"< "}
-        <span className="text-blue-400">
-          <TypeAnimation
-            sequence={[
-              "Full Stack Developer",
-              2000,
-              "React Native Dev",
-              2000,
-              "Frontend Engineer",
-              2000,
-              "Backend Engineer",
-              2000,
-            ]}
-            wrapper="span"
-            speed={55}
-            repeat={Infinity}
-          />
-        </span>
-        {" />"}
-      </span>
-    </motion.div>
+            <h1
+              className="
+              text-5xl
+              md:text-7xl
+              font-bold
+              text-gray-900
+              leading-[1.05]
+              tracking-tight
+            "
+            >
+              Hi, I'm
+              <br />
 
-    {/* Description */}
-    <motion.div
-      variants={{
-        hidden: { opacity: 0, y: 30 },
-        visible: { opacity: 1, y: 0 },
-      }}
-      transition={{ duration: 0.8 }}
-      className="relative mt-6 max-w-2xl"
-    >
-      <div className="absolute -inset-4 bg-blue-500/10 blur-3xl rounded-3xl opacity-60 pointer-events-none"></div>
-
-      <p className="relative text-slate-400 text-lg leading-relaxed tracking-wide backdrop-blur-sm">
-        Passionate about building
-        <span className="text-slate-200 font-medium">
-          {" "}high-performance web and mobile applications
-        </span>
-        {" "}with clean UI, scalable backend architecture, and seamless user
-        experiences using modern technologies like Next.js, React, Django,
-        and React Native.
-      </p>
-    </motion.div>
-
-    {/* Buttons */}
-    <motion.div
-      variants={{
-        hidden: { opacity: 0, y: 30 },
-        visible: { opacity: 1, y: 0 },
-      }}
-      transition={{ duration: 0.8 }}
-      className="flex flex-wrap justify-center lg:justify-start gap-4 mt-8"
-    >
-     {/* View Experience */}
-<button
-  onClick={() => {
-    document.getElementById("experience")?.scrollIntoView({
-      behavior: "smooth",
-    });
-  }}
-  className="
-    bg-blue-500 hover:bg-blue-600
-    cursor-pointer
-    px-7 py-3
-    rounded-2xl
-    font-medium
-    transition-all duration-300
-    hover:scale-105
-    hover:-translate-y-1
-    hover:shadow-[0_10px_30px_rgba(59,130,246,0.35)]
-    active:scale-95
-  "
->
-  View Experience
-</button>
-
-{/* Download CV */}
-<button
-  onClick={() => {
-    const link = document.createElement("a");
-    link.href = "/Raghavendra_Gabbur.pdf";
-    link.download = "Raghavendra_Gabbur.pdf";
-    link.click();
-  }}
-  className="
-    border border-slate-600
-    hover:text-blue-500
-    hover:border-blue-500
-    cursor-pointer
-    px-7 py-3
-    rounded-2xl
-    font-medium
-    transition-all duration-300
-    hover:scale-105
-    hover:-translate-y-1
-    hover:shadow-[0_10px_30px_rgba(59,130,246,0.2)]
-    active:scale-95
-    backdrop-blur-sm
-  "
->
-  Download CV
-</button>
-    </motion.div>
-
-    {/* Social Icons */}
-    <motion.div
-          variants={{
-            hidden: { opacity: 0, y: 20 },
-            visible: { opacity: 1, y: 0 },
-          }}
-          transition={{ duration: 0.8 }}
-          className="flex justify-center lg:justify-start gap-6 mt-12"
-        >
-          {[
-            {
-              icon: FaGithub,
-              link: "https://github.com/RaghuG27",
-            },
-            {
-              icon: FaLinkedin,
-              link: "https://linkedin.com/in/raghavendra-gabbur",
-            },
-            {
-              icon: FaInstagram,
-              link: "https://instagram.com/",
-            },
-          ].map((social, index) => {
-            const Icon = social.icon;
-
-            return (
-              <motion.a
-                key={index}
-                href={social.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.15, y: -5 }}
+              <span
                 className="
-                  w-14 h-14
-                  flex items-center justify-center
-                  rounded-2xl
-                  bg-white/5
-                  border border-slate-700/50
-                  backdrop-blur-xl
-                  text-slate-400 text-2xl
-                  hover:text-blue-400
-                  hover:border-blue-500
-                  hover:shadow-[0_0_30px_rgba(34,211,238,0.45)]
-                  transition-all duration-300
-                "
+                bg-gradient-to-r
+                from-blue-600
+                via-indigo-600
+                to-orange-600
+                bg-clip-text
+                text-transparent
+              "
               >
-                <Icon />
-              </motion.a>
-            );
-          })}
-        </motion.div>
-  </motion.div>
+                Raghavendra Gabbur
+              </span>
+            </h1>
 
-  {/* RIGHT IMAGE */}
-  <motion.div
-    initial={{ opacity: 0, scale: 0.8 }}
-    animate={{ opacity: 1, scale: 1 }}
-    transition={{
-      duration: 1,
-      delay: 1.5,
-    }}
-    className="relative flex items-center justify-center"
-  >
+            {/* Role */}
 
+            <div className="mt-6 text-2xl md:text-4xl text-gray-600 font-medium h-[60px]">
+              <TypeAnimation
+                sequence={[
+                  "Full Stack Developer",
+                  2000,
+                  "React Developer",
+                  2000,
+                  "React Native Developer",
+                  2000,
+                  "Next.js Developer",
+                  2000,
+                ]}
+                repeat={Infinity}
+                speed={50}
+              />
+            </div>
 
+            {/* Description */}
 
-  
+            <p
+              className="
+              mt-8
+              text-gray-600
+              text-lg
+              leading-relaxed
+              max-w-2xl
+            "
+            >
+              Passionate about building
+              <span className="font-semibold text-gray-900">
+                {" "}high-performance web and mobile applications
+              </span>
+              {" "}with modern UI, scalable backend architecture, and seamless
+              user experiences using Next.js, React, Django, React Native,
+              TypeScript, and modern cloud technologies.
+            </p>
 
-    {/* Floating Image */}
-<motion.div
-  animate={{
-    y: [0, -10, 0],
-  }}
-  transition={{
-    duration: 4,
-    repeat: Infinity,
-    ease: "easeInOut",
-  }}
-  className="relative mt-25 md:mt-0"
->
+            {/* Buttons */}
 
-  {/* Complete Ring */}
-<div
-  className="
-    absolute
-    -inset-2
-    rounded-full
-    border-[5px]
-    border-blue-500
-    shadow-[0_0_25px_rgba(59,130,246,0.35)]
-  "
-/>
+            <div className="flex flex-wrap gap-4 mt-10 justify-center lg:justify-start">
+              <button
+                onClick={() => {
+                  document
+                    .getElementById("experience")
+                    ?.scrollIntoView({ behavior: "smooth" });
+                }}
+                className="
+                px-8
+                py-4
+                rounded-2xl
+                bg-blue-600
+                text-white
+                font-semibold
+                shadow-lg
+                hover:shadow-xl
+                hover:-translate-y-1
+                transition-all
+                duration-300
+                cursor-pointer
+              "
+              >
+                View Experience
+              </button>
 
-{/* Image */}
-<div
-  className="
-    relative
-    rounded-full
-    p-2
-    bg-[#020617]
-  "
->
-  <Image
-    src="/profile.jpg"
-    alt="profile"
-    width={350}
-    height={350}
-    className="
-      rounded-full object-cover
-      w-[200px] h-[200px]
-      md:w-[350px] md:h-[350px]
-    "
-  />
-</div>
-</motion.div>
-  </motion.div>
-</div>
+              <button
+                onClick={() => {
+                  const link = document.createElement("a");
+                  link.href = "/Raghavendra_Gabbur.pdf";
+                  link.download = "Raghavendra_Gabbur.pdf";
+                  link.click();
+                }}
+                className="
+                px-8
+                py-4
+                rounded-2xl
+                bg-white
+                border
+                border-gray-200
+                text-gray-800
+                font-semibold
+                shadow-md
+                hover:border-blue-500
+                hover:text-blue-600
+                hover:-translate-y-1
+                transition-all
+                duration-300
+                cursor-pointer
+              "
+              >
+                Download CV
+              </button>
+            </div>
+
+            {/* Social Icons */}
+
+            <div className="flex gap-5 mt-12 justify-center lg:justify-start">
+              {[
+                {
+                  icon: FaGithub,
+                  link: "https://github.com/RaghuG27",
+                },
+                {
+                  icon: FaLinkedin,
+                  link: "https://linkedin.com/in/raghavendra-gabbur",
+                },
+                {
+                  icon: FaInstagram,
+                  link: "https://instagram.com",
+                },
+              ].map((social, index) => {
+                const Icon = social.icon;
+
+                return (
+                  <motion.a
+                    key={index}
+                    href={social.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{
+                      scale: 1.1,
+                      y: -5,
+                    }}
+                    className="
+                    w-14
+                    h-14
+                    rounded-2xl
+                    bg-white/80
+                    backdrop-blur-md
+                    border
+                    border-gray-200
+                    shadow-md
+                    flex
+                    items-center
+                    justify-center
+                    text-gray-700
+                    text-xl
+                    hover:text-blue-600
+                    hover:border-blue-500
+                    hover:shadow-xl
+                    transition-all
+                    duration-300
+                  "
+                  >
+                    <Icon />
+                  </motion.a>
+                );
+              })}
+            </div>
+          </motion.div>
+
+          {/* RIGHT SIDE */}
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.85 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 1,
+              delay: 0.3,
+            }}
+            className="relative"
+          >
+            {/* Glow */}
+
+            <div className="absolute inset-0 bg-blue-200 rounded-full blur-3xl opacity-30 scale-110"></div>
+
+            <motion.div
+              animate={{
+                y: [0, -15, 0],
+              }}
+              transition={{
+                duration: 5,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              className="relative"
+            >
+              {/* Ring */}
+
+              <div
+                className="
+                absolute
+                inset-0
+                rounded-full
+                border-[12px]
+                border-white
+                shadow-[0_20px_80px_rgba(0,0,0,0.12)]
+              "
+              />
+
+              <Image
+                src="/my_profile.png"
+                alt="Profile"
+                width={420}
+                height={420}
+                priority
+                className="
+                rounded-full
+                object-cover
+                w-[250px]
+                h-[250px]
+                md:w-[420px]
+                md:h-[420px]
+                relative
+                z-10
+              "
+              />
+            </motion.div>
+
+            {/* Experience Card */}
+
+            <div
+              className="
+              absolute
+              -left-8
+              top-10
+              bg-white
+              rounded-2xl
+              px-5
+              py-3
+              shadow-lg
+              border
+              border-gray-100
+            "
+            >
+              <p className="text-gray-500 text-sm">
+                Experience
+              </p>
+
+              <h3 className="font-bold text-sm text-gray-900">
+                2+ Years
+              </h3>
+            </div>
+
+           
+          </motion.div>
+        </div>
       </div>
 
       {/* Scroll Indicator */}
-      <div className="hidden md:block absolute bottom-10 animate-bounce">
-        <div className="w-6 h-10 border-2 border-slate-500 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-blue-500 rounded-full mt-2"></div>
-        </div>
-      </div>
+
+      <motion.div
+        animate={{
+          opacity: [0.4, 1, 0.4],
+          y: [0, 8, 0],
+        }}
+        transition={{
+          duration: 2,
+          repeat: Infinity,
+        }}
+        className="
+        absolute
+        bottom-8
+        left-1/2
+    
+        -translate-x-1/2
+        flex
+        flex-col
+        items-center
+        text-gray-500
+        text-xs
+        tracking-[4px]
+        uppercase
+      "
+      >
+        Scroll
+
+        <FaArrowDown className="mt-3 text-blue-600 text-lg" />
+      </motion.div>
     </section>
   );
 }
