@@ -5,26 +5,27 @@ import { motion } from "framer-motion";
 export default function ProjectExperience() {
   const projects = [
     {
-      title: "Real-Time Booking & Tracking System",
+      title: "Healthcare Appointment & Therapy Management Platform",
       tech: [
         "Django",
         "REST APIs",
         "CockroachDB",
         "Kafka",
+        "Firebase",
         "React Native",
         "Next.js",
         "TypeScript",
       ],
       description: [
-        "Developed cross-platform mobile applications using React Native and admin dashboards using Next.js.",
-        "Integrated booking systems, live tracking, push notifications, OAuth login, and payment workflows using WebSockets and Google Maps API.",
-        "Implemented API Gateway patterns including caching, rate limiting, and circuit breaker mechanisms.",
-        "Implemented event-driven communication using Apache Kafka for asynchronous processing across services.",
+        "Developed a cross-platform mobile app for appointment scheduling, user onboarding, and appointment management.",
+        "Built real-time booking updates and live status tracking using WebSocket-driven architecture via Django Channels.",
+        "Implemented location-based center discovery and navigation using Google Maps API.",
+        "•	Integrated Firebase push notifications and secure Google/Apple OAuth sign-in for seamless authentication.",
       ],
     },
 
     {
-      title: "Composable Core Banking & Lending Platform",
+      title: "Digital Lending & Loan Lifecycle Management Platform",
       tech: [
         "Django",
         "DRF",
@@ -35,9 +36,10 @@ export default function ProjectExperience() {
         "TypeScript",
       ],
       description: [
-        "Developed responsive lending dashboards and workflow interfaces using Next.js and Tailwind CSS.",
-        "Built frontend interfaces for onboarding, loan processing, document submission, and verification systems.",
-        "Assisted in developing REST APIs using Django REST Framework for loan and transaction management workflows.",
+        "Built a digital lending platform supporting borrower onboarding, loan processing, document submission, and fund disbursement workflows.",
+        "Owned REST API design and database schema for loan lifecycle, accounts, and transaction modules.",
+        "•	Built multi-step onboarding forms, document upload modules, validation workflows, and approval processes.",
+        "Built responsive dashboard and workflow interfaces using Next.js, Tailwind CSS.",
       ],
     },
   ];

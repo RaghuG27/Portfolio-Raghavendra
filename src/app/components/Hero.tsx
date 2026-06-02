@@ -236,14 +236,14 @@ export default function Hero() {
             <div className="absolute inset-0 bg-blue-200 rounded-full blur-3xl opacity-30 scale-110"></div>
 
             <motion.div
-              animate={{
-                y: [0, -15, 0],
-              }}
-              transition={{
-                duration: 5,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
+              // animate={{
+              //   y: [0, -15, 0],
+              // }}
+              // transition={{
+              //   duration: 5,
+              //   repeat: Infinity,
+              //   ease: "easeInOut",
+              // }}
               className="relative"
             >
               {/* Ring */}
@@ -300,6 +300,34 @@ export default function Hero() {
 
               <h3 className="font-bold text-sm text-gray-900">
                 2+ Years
+              </h3>
+
+            
+            </div>
+
+            {/* Skills Card */}
+
+            <div
+              className="
+                absolute
+                -right-8
+                bottom-12
+                bg-white
+                rounded-2xl
+                px-5
+                py-3
+                shadow-lg
+                border
+                border-gray-100
+                z-50
+              "
+            >
+              <p className="text-gray-500 text-sm">
+                Tech Skills
+              </p>
+
+              <h3 className="font-bold text-sm text-gray-900">
+                10+
               </h3>
             </div>
 
