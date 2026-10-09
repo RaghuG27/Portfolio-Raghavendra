@@ -37,7 +37,18 @@ export default function Hero() {
             transition={{ duration: 0.8 }}
             className="max-w-3xl text-center lg:text-left"
           >
-          
+            {/* Availability Pill */}
+
+            <div className="inline-flex items-center gap-2 px-4 py-2 mb-8 rounded-full bg-white/80 backdrop-blur-md border border-gray-200 shadow-sm">
+              <span className="relative flex h-2.5 w-2.5">
+                <span className="absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75 animate-ping" />
+                <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-green-500" />
+              </span>
+
+              <span className="text-sm font-medium text-gray-700">
+                Available for new opportunities
+              </span>
+            </div>
 
             {/* Heading */}
 
@@ -73,13 +84,13 @@ export default function Hero() {
             <div className="mt-6 text-2xl md:text-4xl text-gray-600 font-medium h-[60px]">
               <TypeAnimation
                 sequence={[
-                  "Full Stack Developer",
+                  "Python Full Stack Developer",
                   2000,
-                  "React Developer",
+                  "Generative AI Developer",
                   2000,
-                  "React Native Developer",
+                  "Django & FastAPI Developer",
                   2000,
-                  "Next.js Developer",
+                  "React & Next.js Developer",
                   2000,
                 ]}
                 repeat={Infinity}
@@ -100,11 +111,11 @@ export default function Hero() {
             >
               Passionate about building
               <span className="font-semibold text-gray-900">
-                {" "}high-performance web and mobile applications
+                {" "}high-performance web, mobile, and Generative AI applications
               </span>
-              {" "}with modern UI, scalable backend architecture, and seamless
-              user experiences using Next.js, React, Django, React Native,
-              TypeScript, and modern cloud technologies.
+              {" "}with scalable backend architecture and seamless user
+              experiences using Django, FastAPI, Next.js, React, React Native,
+              and LLMs like Google Gemini and OpenAI.
             </p>
 
             {/* Buttons */}
@@ -299,7 +310,7 @@ export default function Hero() {
               </p>
 
               <h3 className="font-bold text-sm text-gray-900">
-                2+ Years
+                2.7+ Years
               </h3>
 
             
@@ -327,7 +338,7 @@ export default function Hero() {
               </p>
 
               <h3 className="font-bold text-sm text-gray-900">
-                10+
+                20+
               </h3>
             </div>
 

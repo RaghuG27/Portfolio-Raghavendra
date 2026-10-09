@@ -12,6 +12,7 @@ import {
   FaJs,
   FaPython,
   FaDocker,
+  FaBrain,
 } from "react-icons/fa";
 
 export default function About() {
@@ -28,7 +29,14 @@ export default function About() {
       title: "Backend Development",
       bgIcons: [<FaPython />, <FaServer />, <FaDocker />],
       description:
-        "Developing scalable backend systems and REST APIs using Python, Django, Django REST Framework, JWT Authentication, and secure workflows.",
+        "Developing scalable backend systems and secure REST APIs using Python, Django REST Framework, FastAPI, JWT/RBAC, Celery, Redis, and Kafka.",
+    },
+    {
+      icon: <FaBrain />,
+      title: "Generative AI",
+      bgIcons: [<FaBrain />, <FaPython />, <FaServer />],
+      description:
+        "Integrating LLMs (Google Gemini, OpenAI) with prompt engineering and Pydantic-validated structured outputs for document analysis, OCR extraction, and resume analysis.",
     },
     {
       icon: <FaMobileAlt />,
@@ -39,10 +47,17 @@ export default function About() {
     },
     {
       icon: <FaDatabase />,
-      title: "Database & Cloud",
-      bgIcons: [<FaDatabase />, <FaDocker />, <FaServer />],
+      title: "Databases",
+      bgIcons: [<FaDatabase />, <FaServer />, <FaDocker />],
       description:
-        "Working with MySQL, PostgreSQL, CockroachDB, Redis, Docker, Firebase, and Google Cloud Platform for scalable deployments.",
+        "Designing and optimizing data layers with PostgreSQL, CockroachDB, MySQL, and Redis using indexing, ORM query optimization, and caching.",
+    },
+    {
+      icon: <FaDocker />,
+      title: "Cloud & DevOps",
+      bgIcons: [<FaDocker />, <FaServer />, <FaDatabase />],
+      description:
+        "Containerizing services with Docker, building CI/CD pipelines, and deploying on Google Cloud Platform with Firebase and Cloudinary integrations.",
     },
   ];
 
@@ -81,20 +96,20 @@ export default function About() {
           </p>
 
           <h2 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
-            Full Stack Developer
+            Python Full Stack Developer
             <br />
-            <span className="text-blue-600">
-              Building Scalable Applications
+            <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-orange-600 bg-clip-text text-transparent">
+              Building Scalable AI Applications
             </span>
           </h2>
 
           <p className="text-gray-600 text-lg leading-relaxed mt-8 max-w-4xl mx-auto">
-            Software Developer with 2+ years of experience building scalable
-            full-stack web and mobile applications using Next.js, React.js,
-            React Native, Python, and Django REST Framework. Experienced in
-            developing responsive frontend interfaces, RESTful APIs,
-            authentication systems, database-driven applications, and cloud
-            deployments.
+            Python Full Stack Developer with 2.7+ years of experience building
+            scalable web, mobile, and Generative AI applications using Django
+            REST Framework, FastAPI, React.js, Next.js, and React Native.
+            Integrates LLMs (Google Gemini, OpenAI) with prompt engineering and
+            Pydantic-validated structured outputs, and builds secure REST APIs,
+            event-driven processing, and cloud-native deployments.
           </p>
         </motion.div>
 
@@ -118,6 +133,7 @@ export default function About() {
               }}
               viewport={{ once: true }}
               className="
+                group
                 relative
                 overflow-hidden
                 bg-white
@@ -132,6 +148,10 @@ export default function About() {
                 duration-500
               "
             >
+              {/* Hover Accent Bar */}
+
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 via-indigo-600 to-orange-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+
               {/* Background Icons */}
 
               <div className="absolute inset-0 overflow-hidden opacity-5">
@@ -201,18 +221,24 @@ export default function About() {
           "
         >
           <div className="text-center">
-            <h3 className="text-4xl font-bold text-blue-600">2+</h3>
+            <h3 className="text-5xl font-bold bg-gradient-to-r from-blue-600 via-indigo-600 to-orange-600 bg-clip-text text-transparent">
+              2.7+
+            </h3>
             <p className="text-gray-600 mt-3">Years Experience</p>
           </div>
 
           <div className="text-center">
-            <h3 className="text-4xl font-bold text-blue-600">10+</h3>
-            <p className="text-gray-600 mt-3">Technologies</p>
+            <h3 className="text-5xl font-bold bg-gradient-to-r from-blue-600 via-indigo-600 to-orange-600 bg-clip-text text-transparent">
+              40+
+            </h3>
+            <p className="text-gray-600 mt-3">REST APIs Built</p>
           </div>
 
           <div className="text-center">
-            <h3 className="text-4xl font-bold text-blue-600">100%</h3>
-            <p className="text-gray-600 mt-3">Responsive Design</p>
+            <h3 className="text-5xl font-bold bg-gradient-to-r from-blue-600 via-indigo-600 to-orange-600 bg-clip-text text-transparent">
+              20+
+            </h3>
+            <p className="text-gray-600 mt-3">Technologies</p>
           </div>
         </motion.div>
       </div>

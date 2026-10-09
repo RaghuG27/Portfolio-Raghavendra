@@ -113,21 +113,45 @@ export default function NavBar() {
                     text-gray-600
                     hover:text-blue-600
                     font-medium
-                    transition-all
+                    transition-colors
                     duration-300
                     group
                   "
                 >
+                  {/* Light blue hover highlight */}
+
                   <span
                     className="
                       absolute
                       inset-0
                       rounded-xl
                       bg-blue-50
-                      scale-0
+                      opacity-0
+                      scale-95
+                      group-hover:opacity-100
                       group-hover:scale-100
                       transition-all
                       duration-300
+                      ease-out
+                    "
+                  />
+
+                  {/* Underline accent */}
+
+                  <span
+                    className="
+                      absolute
+                      bottom-1
+                      left-1/2
+                      -translate-x-1/2
+                      h-0.5
+                      w-0
+                      rounded-full
+                      bg-blue-500
+                      group-hover:w-5
+                      transition-all
+                      duration-300
+                      ease-out
                     "
                   />
 
@@ -202,10 +226,13 @@ export default function NavBar() {
                     className="
                       text-gray-700
                       hover:text-blue-600
+                      hover:bg-blue-50
                       font-medium
-                      border-b
-                      border-gray-100
-                      pb-4
+                      rounded-xl
+                      px-4
+                      py-3
+                      transition-colors
+                      duration-300
                     "
                   >
                     {link.name}

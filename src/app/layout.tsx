@@ -11,21 +11,23 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://your-domain.com"),
 
   title: {
-    default: "Raghavendra Gabbur | Full Stack Developer",
+    default: "Raghavendra Gabbur | Python Full Stack Developer",
     template: "%s | Raghavendra Gabbur",
   },
 
   description:
-    "Full Stack Software Developer with 2+ years of experience building scalable web and mobile applications using Next.js, React, React Native, Django, PostgreSQL, Docker, Firebase and Cloud technologies.",
+    "Python Full Stack Developer with 2.7+ years of experience building scalable web, mobile and Generative AI applications using Django REST Framework, FastAPI, React.js, Next.js, React Native, and LLMs (Google Gemini, OpenAI).",
 
   keywords: [
     "Raghavendra Gabbur",
-    "Full Stack Developer",
+    "Python Full Stack Developer",
+    "Generative AI Developer",
+    "Django Developer",
+    "FastAPI Developer",
     "Next.js Developer",
     "React Developer",
     "React Native Developer",
-    "Django Developer",
-    "Frontend Engineer",
+    "LLM Integration",
     "Backend Developer",
     "Software Engineer",
   ],
@@ -39,9 +41,9 @@ export const metadata: Metadata = {
   creator: "Raghavendra Gabbur",
 
   openGraph: {
-    title: "Raghavendra Gabbur | Full Stack Developer",
+    title: "Raghavendra Gabbur | Python Full Stack Developer",
     description:
-      "Building modern web and mobile applications using React, Next.js, React Native and Django.",
+      "Building modern web, mobile and Generative AI applications using Django, FastAPI, React, Next.js, React Native, and LLMs.",
 
     type: "website",
 
@@ -56,7 +58,7 @@ export const metadata: Metadata = {
     title: "Raghavendra Gabbur",
 
     description:
-      "Full Stack Developer specializing in React, Next.js, Django and React Native.",
+      "Python Full Stack Developer specializing in Django, FastAPI, React, Next.js, and Generative AI.",
   },
 
   robots: {

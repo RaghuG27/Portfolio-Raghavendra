@@ -5,41 +5,54 @@ import { motion } from "framer-motion";
 export default function ProjectExperience() {
   const projects = [
     {
-      title: "Healthcare Appointment & Therapy Management Platform",
+      title: "MVBook — Multi-Tenant SaaS Business Management & Accounting Platform",
+      type: "SaaS Platform",
       tech: [
-        "Django",
-        "REST APIs",
-        "CockroachDB",
-        "Kafka",
-        "Firebase",
-        "React Native",
+        "React.js",
         "Next.js",
         "TypeScript",
+        "Tailwind CSS",
+        "Django REST Framework",
+        "FastAPI",
+        "PostgreSQL",
+        "CockroachDB",
+        "Redis",
+        "Celery",
+        "Apache Kafka",
+        "OpenAI API",
+        "Docker",
+        "GCP",
       ],
       description: [
-        "Developed a cross-platform mobile app for appointment scheduling, user onboarding, and appointment management.",
-        "Built real-time booking updates and live status tracking using WebSocket-driven architecture via Django Channels.",
-        "Implemented location-based center discovery and navigation using Google Maps API.",
-        "•	Integrated Firebase push notifications and secure Google/Apple OAuth sign-in for seamless authentication.",
+        "Built a multi-tenant SaaS platform for sales, purchase, inventory, reporting, and financial workflows across client organizations.",
+        "Secured REST APIs with JWT authentication, RBAC, and tenant-aware access controls to enforce data isolation between organizations.",
+        "Engineered a Kafka audit-logging pipeline with a transactional outbox and idempotent consumers for duplicate-free event delivery.",
+        "Implemented a Django API Gateway with Redis caching, session management, and rate limiting across accounting, inventory, reporting, OCR, and notification services.",
+        "Built an OpenAI-powered OCR pipeline extracting structured invoice and purchase-document data, reducing manual data entry.",
+        "Containerized backend services with Docker and deployed the platform on Google Cloud Platform (GCP).",
       ],
     },
 
     {
-      title: "Digital Lending & Loan Lifecycle Management Platform",
+      title: "AI Resume Analyzer & Career Assistant",
+      type: "Generative AI",
       tech: [
-        "Django",
-        "DRF",
-        "CockroachDB",
+        "Python",
+        "FastAPI",
+        "Google Gemini",
+        "OpenAI API",
+        "PostgreSQL",
+        "Celery",
+        "Redis",
         "Next.js",
-        "React Native",
-        "Tailwind CSS",
-        "TypeScript",
+        "JWT",
+        "Docker",
       ],
       description: [
-        "Built a digital lending platform supporting borrower onboarding, loan processing, document submission, and fund disbursement workflows.",
-        "Owned REST API design and database schema for loan lifecycle, accounts, and transaction modules.",
-        "•	Built multi-step onboarding forms, document upload modules, validation workflows, and approval processes.",
-        "Built responsive dashboard and workflow interfaces using Next.js, Tailwind CSS.",
+        "Built a FastAPI and Google Gemini platform that evaluates resumes against job descriptions, matching required and preferred skills, experience, keywords, and education to resume evidence.",
+        "Designed prompts and Pydantic response schemas so every analysis returns consistent, validated, application-ready JSON.",
+        "Ran analyses as Celery/Redis tasks with status tracking, retries, and failure handling; JWT-secured APIs with ownership checks.",
+        "Built a Next.js dashboard showing resume scores, matched and missing requirements, strengths, weaknesses, and learning resources.",
       ],
     },
   ];
@@ -70,17 +83,17 @@ export default function ProjectExperience() {
           </p>
 
           <h2 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
-            Enterprise & Fintech
+            SaaS & Generative AI
             <br />
-            <span className="text-blue-600">
+            <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-orange-600 bg-clip-text text-transparent">
               Platforms
             </span>
           </h2>
 
           <p className="text-gray-600 text-lg leading-relaxed mt-8 max-w-4xl mx-auto">
-            Worked on scalable fintech and enterprise-grade applications
-            involving real-time systems, payment integrations,
-            APIs, event-driven architecture, and cloud-native platforms.
+            Building scalable SaaS and Generative AI applications involving
+            multi-tenant architecture, LLM integrations, event-driven pipelines,
+            secure APIs, and cloud-native deployments.
           </p>
         </motion.div>
 
@@ -110,6 +123,9 @@ export default function ProjectExperience() {
               }}
               viewport={{ once: true }}
               className="
+                group
+                relative
+                overflow-hidden
                 bg-white
                 rounded-[32px]
                 border
@@ -122,6 +138,10 @@ export default function ProjectExperience() {
                 duration-500
               "
             >
+              {/* Hover Accent Bar */}
+
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 via-indigo-600 to-orange-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+
               {/* Header */}
 
               <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
@@ -140,9 +160,10 @@ export default function ProjectExperience() {
                     text-blue-600
                     font-medium
                     w-fit
+                    whitespace-nowrap
                   "
                 >
-                  Enterprise Project
+                  {project.type}
                 </div>
               </div>
 

@@ -9,6 +9,8 @@ import {
   FaDatabase,
   FaServer,
   FaTools,
+  FaBrain,
+  FaShieldAlt,
 } from "react-icons/fa";
 
 export default function Skills() {
@@ -20,10 +22,14 @@ export default function Skills() {
       skills: [
         "React.js",
         "Next.js",
+        "React Native",
         "TypeScript",
         "JavaScript",
         "Tailwind CSS",
-        "React Native",
+        "Shadcn/UI",
+        "Redux Toolkit",
+        "Zustand",
+        "React Query",
       ],
     },
 
@@ -35,33 +41,70 @@ export default function Skills() {
         "Python",
         "Django",
         "Django REST Framework",
+        "FastAPI",
         "REST APIs",
-        "JWT Authentication",
+        "Microservices",
+        "Celery",
+        "Apache Kafka",
+        "WebSockets",
       ],
     },
 
     {
-      title: "Database",
+      title: "Generative AI",
+      level: "Advanced",
+      icon: <FaBrain />,
+      skills: [
+        "Google Gemini",
+        "OpenAI API",
+        "LLMs",
+        "Prompt Engineering",
+        "Pydantic",
+        "LangChain",
+        "RAG",
+        "Embeddings",
+        "ChromaDB",
+      ],
+    },
+
+    {
+      title: "Databases",
       level: "Advanced",
       icon: <FaDatabase />,
       skills: [
-        "MySQL",
         "PostgreSQL",
         "CockroachDB",
+        "MySQL",
         "Redis",
+        "ORM Optimization",
+        "Indexing",
       ],
     },
 
     {
-      title: "Tools & Cloud",
+      title: "Security",
+      level: "Advanced",
+      icon: <FaShieldAlt />,
+      skills: [
+        "JWT Authentication",
+        "RBAC",
+        "OAuth 2.0",
+        "Session Management",
+      ],
+    },
+
+    {
+      title: "Cloud & Tools",
       level: "Advanced",
       icon: <FaTools />,
       skills: [
+        "Docker",
+        "CI/CD",
+        "Google Cloud",
+        "Firebase",
+        "Cloudinary",
         "Git",
         "GitHub",
-        "Docker",
-        "Firebase",
-        "Google Cloud",
         "Postman",
       ],
     },
@@ -95,15 +138,15 @@ export default function Skills() {
           <h2 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
             Technologies
             <br />
-            <span className="text-blue-600">
+            <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-orange-600 bg-clip-text text-transparent">
               I Work With
             </span>
           </h2>
 
           <p className="text-gray-600 text-lg leading-relaxed mt-8 max-w-4xl mx-auto">
-            Building scalable web applications, mobile applications,
-            APIs and cloud-ready solutions using modern technologies
-            and industry best practices.
+            Building scalable web, mobile, and Generative AI applications,
+            secure REST APIs, and cloud-ready solutions using modern
+            technologies and industry best practices.
           </p>
         </motion.div>
 
@@ -127,6 +170,7 @@ export default function Skills() {
               }}
               viewport={{ once: true }}
               className="
+                group
                 relative
                 overflow-hidden
                 bg-white
@@ -141,6 +185,10 @@ export default function Skills() {
                 duration-500
               "
             >
+              {/* Hover Accent Bar */}
+
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 via-indigo-600 to-orange-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+
               {/* Background Decoration */}
 
               <div className="absolute inset-0 overflow-hidden opacity-5">
@@ -228,20 +276,26 @@ export default function Skills() {
             {[
               "React",
               "Next.js",
+              "React Native",
               "TypeScript",
               "JavaScript",
               "Python",
               "Django",
               "DRF",
-              "MySQL",
+              "FastAPI",
+              "Celery",
+              "Kafka",
+              "Google Gemini",
+              "OpenAI",
+              "LangChain",
               "PostgreSQL",
               "CockroachDB",
               "Redis",
               "Docker",
+              "GCP",
+              "Firebase",
               "Git",
               "GitHub",
-              "Firebase",
-              "Google Cloud",
               "Postman",
             ].map((tech, index) => (
               <motion.div
@@ -291,6 +345,7 @@ export default function Skills() {
           {[
             FaReact,
             FaPython,
+            FaBrain,
             FaDocker,
             FaGitAlt,
             FaDatabase,

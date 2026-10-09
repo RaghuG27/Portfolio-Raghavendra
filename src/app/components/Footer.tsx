@@ -29,14 +29,14 @@ export default function Footer() {
           {/* Role */}
 
           <p className="text-gray-600 mt-4 text-lg">
-            Full Stack Software Developer
+            Python Full Stack Developer | Generative AI
           </p>
 
           {/* Small Description */}
 
           <p className="text-gray-500 mt-4 max-w-xl mx-auto">
-            Building scalable web applications, mobile applications,
-            APIs, and cloud-native solutions with modern technologies.
+            Building scalable web, mobile, and Generative AI applications,
+            secure APIs, and cloud-native solutions with modern technologies.
           </p>
 
           {/* Bottom */}

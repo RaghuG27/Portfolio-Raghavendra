@@ -64,7 +64,7 @@ export default function Contact() {
           <h2 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
             Let's Build Something
             <br />
-            <span className="text-blue-600">
+            <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-orange-600 bg-clip-text text-transparent">
               Amazing Together
             </span>
           </h2>

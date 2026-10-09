@@ -6,56 +6,37 @@ import { FaBriefcase } from "react-icons/fa";
 export default function Experience() {
   const experiences = [
     {
-      role: "Software Developer",
+      role: "Full Stack Software Engineer",
       company: "Gowdanar Technosoft Pvt Ltd (GTPL)",
-      duration: "Jun 2024 - Present",
+      duration: "Apr 2024 - Present",
 
       points: [
-        "Developed scalable enterprise-grade web and mobile applications using Python, Django, React Native, Next.js, and RESTful APIs.",
-        "Built reusable responsive frontend interfaces using Next.js, React Native, Tailwind CSS, and TypeScript.",
-        "Implemented secure backend services using JWT authentication, RBAC authorization, and API security mechanisms.",
-        "Designed scalable database architectures using PostgreSQL, MySQL, and CockroachDB.",
-        "Integrated Firebase, Google Maps API, Razorpay, Google Sign-In, and Apple Sign-In workflows.",
-        "Implemented Redis caching to reduce API latency on high-traffic endpoints.",
-        "Worked across the complete SDLC including development, testing, deployment, debugging, and production support.",
-        "Collaborated using Git/GitHub workflows, Postman, Agile methodologies, and code review practices.",
+        "Built full-stack web and mobile applications using Python, Django REST Framework, FastAPI, React.js, Next.js, and React Native.",
+        "Designed and maintained 40+ REST APIs for authentication, onboarding, user management, document verification, and workflow automation.",
+        "Developed Generative AI features with Google Gemini and OpenAI APIs (document analysis, OCR extraction, resume analysis) using prompt engineering and Pydantic structured outputs.",
+        "Implemented JWT authentication, RBAC, API-level permissions, and Google/Apple OAuth 2.0 sign-in across multiple user roles and business workflows.",
+        "Built asynchronous, event-driven processing with Celery, Redis, and Kafka for long-running workflows, notifications, and AI tasks.",
+        "Improved application performance by 20–30% and reduced database load via PostgreSQL/CockroachDB indexing, ORM query optimization, and Redis caching.",
+        "Improved frontend rendering performance by ~60% on performance-sensitive interfaces by reducing unnecessary re-renders.",
+        "Delivered real-time features with WebSockets and Django Channels, and push notifications through Firebase Cloud Messaging (FCM).",
+        "Dockerized services, contributed to CI/CD pipelines, and automated third-party API integrations, reducing manual effort.",
+        "Supported production deployments, debugging, root-cause analysis, and performance tuning for business-critical applications.",
       ],
 
       tech: [
-        // "Next.js",
-        // "React.js",
-        // "React Native",
-        // "Python",
-        // "Django",
-        // "DRF",
-        // "PostgreSQL",
-        // "Docker",
-        // "Redis",
-        // "Firebase",
-        // "GCP",
-      ],
-    },
-
-    {
-      role: "Software Developer Intern",
-      company: "Gowdanar Technosoft Pvt Ltd (GTPL)",
-      duration: "Dec 2023 - May 2024",
-
-      points: [
-        "Contributed to fintech web applications using Django and Next.js.",
-        "Designed and tested RESTful API endpoints using Django REST Framework.",
-        "Developed responsive UI components using React.js and Next.js.",
-        "Performed API integration, debugging, and testing using Postman and browser DevTools.",
-        "Collaborated with team members using Git/GitHub workflows and Agile sprint discussions.",
-      ],
-
-      tech: [
-        // "React.js",
-        // "Next.js",
-        // "Django",
-        // "DRF",
-        // "Postman",
-        // "GitHub",
+        "Python",
+        "Django REST Framework",
+        "FastAPI",
+        "React.js",
+        "Next.js",
+        "React Native",
+        "Google Gemini",
+        "OpenAI",
+        "Celery",
+        "Kafka",
+        "Redis",
+        "PostgreSQL",
+        "Docker",
       ],
     },
   ];
@@ -88,15 +69,15 @@ export default function Experience() {
           <h2 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
             Professional
             <br />
-            <span className="text-blue-600">
+            <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-orange-600 bg-clip-text text-transparent">
               Experience
             </span>
           </h2>
 
           <p className="text-gray-600 text-lg leading-relaxed mt-8 max-w-4xl mx-auto">
-            Delivering scalable enterprise applications, secure backend
-            systems, and modern responsive user experiences across fintech,
-            enterprise, and mobile platforms.
+            Building scalable web, mobile, and Generative AI applications with
+            secure REST APIs, event-driven processing, and modern responsive
+            user experiences across enterprise and SaaS platforms.
           </p>
         </motion.div>
 
@@ -158,6 +139,9 @@ export default function Experience() {
 
               <div
                 className="
+                group
+                relative
+                overflow-hidden
                 bg-white
                 rounded-[32px]
                 border
@@ -170,6 +154,10 @@ export default function Experience() {
                 duration-500
               "
               >
+                {/* Hover Accent Bar */}
+
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 via-indigo-600 to-orange-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+
                 {/* Header */}
 
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
